@@ -1,18 +1,3 @@
-html {
-  background-color: #F5F5F5;
-}  
-
-body {
-  padding-top: 92px;
-  padding-bottom: 88px;
-  background-color: #fff;
-}
-
-a {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-}
-
 .overlay {
   background-color: rgba(0, 0, 0);
   opacity: 0.6;
@@ -31,9 +16,8 @@ a {
   align-items: center;
   grid-template-columns: 3fr 1fr 3fr;
   font-size: 18px;
-  margin: 0 auto 96px;
+  margin: 0 auto 92px;
   padding: 0 27px;
-  height: 105px;
 }
 
 .header__links-list {
@@ -75,8 +59,8 @@ a {
 .cover {
   position: relative;
   margin-bottom: 179px;
-  background-image: url("/images/cover.jpg");
-  background-size: 125% 100%;
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
   background-position: center;
   padding: 165px 50px 50px;
   color: white;
@@ -86,18 +70,21 @@ a {
 .cover__title {
   font-size: 100px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1;
   letter-spacing: 0.3em;
-  margin-bottom: 128px;
+  margin-bottom: 135px;
 }
 
 .span__block {
   display: block;
-  margin-bottom: 11px;
+  margin-bottom: 20px;
+}
+
+.span__block:first-of-type{
+  line-height: 1.15;
 }
 
 .span__center {
-  margin-bottom: 7px;
   text-align: center;
 }
 
@@ -127,9 +114,10 @@ a {
 }
 
 .bet-button {
-  height: 51px;
+  min-height: 51px;
   width: 256px;
 
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   font-weight: 500;
   line-height: 1.17;
@@ -138,7 +126,7 @@ a {
 
   color: #fff;
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   text-transform: uppercase;
 }
 
@@ -167,36 +155,34 @@ a {
 }
 
 .card_type_film {
-  background-image: url(/images/card-lot-01.jpg);
+  background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
-  background-image: url(/images/card-lot-02.jpg);
+  background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
-  background-image: url(/images/card-lot-03.jpg);
+  background-image: url(../images/card-lot-03.jpg);
 }
 
 .card {
-  height: 563px;
+  min-height: 564px;
   background-size: cover;
   background-position: center;
   position: relative;
   color: #fff;
+  z-index: 0;
   padding: 51px 40px 48px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 0;
 }
 
 .card__link {
-  text-decoration: none;
   display: block;
-  position: absolute;
+  text-decoration: none;
   inset: 0 0;
-  z-index: 1;
 }
 
 .card__title {
@@ -256,9 +242,6 @@ a {
   font-size: 20px;
   letter-spacing: 0.006em;
   line-height: 1.2;
-}
-
-.about__text:first-of-type {
   margin-bottom: 24px;
 }
 
@@ -281,6 +264,7 @@ a {
 }
 
 .footer__social-list {
+  list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
